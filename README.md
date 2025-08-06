@@ -63,7 +63,7 @@ formation used in trading and investing. It supports **inverted** (bullish) patt
 
 ## Project Structure
 
-    head-and-shoulders.py   # Main script for pattern detection and visualization
+    inverse-head-and-shoulders.py   # Main script for pattern detection and visualization
     rolling_window.py       # Utility for rolling top/bottom detection (imported)
 
 ------------------------------------------------------------------------
@@ -97,19 +97,19 @@ pip install pandas numpy matplotlib mplfinance yfinance
 1.  **Import and Run the Script**
 
 ``` python
-import head_and_shoulders as hs
+import inverse_head_and_shoulders as ihs
 
 # Example: Fetch and analyze Apple (AAPL) stock
 import yfinance as yf
 
 data = yf.download("AAPL", period="1y", interval="1d")
-patterns = hs.detect_head_and_shoulders(data['Close'])
+patterns = ihs.detect_head_and_shoulders(data['Close'])
 ```
 
 2.  **Visualize Detected Patterns**
 
 ``` python
-hs.plot_patterns(data, patterns)
+ihs.plot_patterns(data, patterns)
 ```
 
 This will display candlestick charts with detected **Head and
